@@ -24,6 +24,7 @@ socket.broadcast.emit("onend",point)
 app.use(express.static('public'));
 // server start
 
-server.listen(3000, function () {
+const port = process.env.PORT || 3000 ;
+server.listen(port, function () {
     console.log("Server started at port 3000")
 })
